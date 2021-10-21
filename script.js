@@ -1,51 +1,41 @@
-//Set up Http Request
-var xhr = new XMLHttpRequest();
+let Fruits = ["Apple", "Grapes", "Mangoes", "kiwi", "Coconut"];
+// 1.loop normal for loops
+// let result = "  ";
+// for (let i = 0; i < Fruits.length; i++) {
+//   result += ` ${Fruits[i]} `;
+// }
 
-//create and send Get request
-//GET,POST,PUT,DELETE,
-// Second =>ENdpoint of the url:server url
-xhr.open(
-  "GET",
-  "https://raw.githubusercontent.com/rvsp/restcountries-json-data/master/res-countries.json"
-);
-// set up our listener to process the request
-xhr.onload = function () {
-  //process the request and server will return the data
-  if (xhr.status >= 200 && xhr.status < 300) {
-    //converting the raw data into js notation format
-    var t = JSON.parse(this.response);
-    console.log(t);
+// console.log(result);
+// 2.for-in
 
-    for (let i = 0; i < t.length; i++) {
-      console.log(`
-        Country: ${t[i].name}
-        Population:${t[i].population}
-        Region:${t[i].region}
-        Currency:${t[i].currencies[0].code}
-        `);
-    }
-  } else {
-    //it should not give you data
-    console.log("Data is not available");
-  }
-};
+// let result = " ";
+// for (let index in Fruits) {
+//   result += ` ${Fruits[index]} `;
+// }
+// console.log(result);
 
-xhr.send();
+// 3.for-of loop
 
-// fetch,async,await,axios
+// result = "";
+// for (let fruit of Fruits) {
+//   result += ` ${fruit} `; //template literal ` ` and $
+// }
+// console.log(result);
+// 4.Es5 forEach function
 
-// API=>Application programming interface
+result = "";
 
-// Restaurent website
-// Food items
+Fruits.forEach(function (fruit) {
+  result += ` ${fruit} `;
+});
 
-// 1.name
-// 2.population
-// 3.region
-// 4.currency
+console.log(result);
+// 5.foEach functuin with Arrow operator Es6
 
-// 1.id
-// 2.Name
-// 3.email
-// 4.city
-// 5.phone
+result = "";
+
+Fruits.forEach((x) => (result += ` ${x} `));
+
+console.log(result);
+
+// for-of
