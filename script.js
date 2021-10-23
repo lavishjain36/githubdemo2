@@ -1,41 +1,11 @@
-let Fruits = ["Apple", "Grapes", "Mangoes", "kiwi", "Coconut"];
-// 1.loop normal for loops
-// let result = "  ";
-// for (let i = 0; i < Fruits.length; i++) {
-//   result += ` ${Fruits[i]} `;
-// }
+function addNew() {
+  //select the target element that list
+  let select = document.getElementById("list");
 
-// console.log(result);
-// 2.for-in
+  //create a new option
+  let newOption = document.createElement("option");
 
-// let result = " ";
-// for (let index in Fruits) {
-//   result += ` ${Fruits[index]} `;
-// }
-// console.log(result);
-
-// 3.for-of loop
-
-// result = "";
-// for (let fruit of Fruits) {
-//   result += ` ${fruit} `; //template literal ` ` and $
-// }
-// console.log(result);
-// 4.Es5 forEach function
-
-result = "";
-
-Fruits.forEach(function (fruit) {
-  result += ` ${fruit} `;
-});
-
-console.log(result);
-// 5.foEach functuin with Arrow operator Es6
-
-result = "";
-
-Fruits.forEach((x) => (result += ` ${x} `));
-
-console.log(result);
-
-// for-of
+  //select the input country using textbox
+  newOption.text = document.getElementById("textbox").value;
+  select.add(newOption);
+}
