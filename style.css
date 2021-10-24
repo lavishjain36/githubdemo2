@@ -3,17 +3,20 @@
   align-items: center;
   justify-content: center;
 }
+
 .box {
   width: 200px;
   height: 200px;
 }
+
 h1,
 span {
-  font-size: 2em;
+  font-size: 20px;
   display: inline-block;
-  font-family: monospace;
+  font-family: sans-serif;
 }
-#clickedColor {
-  padding: 5px;
+
+#clickedcolor {
+  padding: 8px;
   color: #fff;
 }
