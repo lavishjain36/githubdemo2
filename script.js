@@ -1,20 +1,54 @@
-//array of colors
+// I am executing 10 lines
 
-let colors = ["red", "blue", "orange", "green", "yellow", "indigo", "violet"];
+// 5 hr
 
-let container = document.querySelector("#container");
-let h1 = document.querySelector("h1");
+// setTimeout and setInterval
 
-let clickedcolor = document.querySelector("#clickedcolor");
+// it execute a js statement after n interval
+// setTimeout(function(){
+//     somefun()
+// },1000)
 
-for (const color of colors) {
-  let box = document.createElement("div");
-  box.classList.add("box");
-  container.appendChild(box);
-  box.style.backgroundColor = color;
-  box.addEventListener("click", function () {
-    h1.innerHTML = "You have selected";
-    clickedcolor.innerHTML = color;
-    clickedcolor.style.backgroundColor = color;
-  });
+// setInterval(function(){
+//     fun()
+// },3000)
+
+// should be in millisecond
+
+// setTimeout(() => {
+//   console.log("I will execute after 2000 millisecond");
+// }, 5000);
+
+// function displayData() {
+//   console.log("I will execute after 3000ms");
+// }
+
+// let setTimer = setTimeout(displayData, 3000);
+
+// // i want to cancel setTImeout
+
+// setTimeout(() => {
+//   clearTimeout(setTimer);
+// }, 100);
+
+let i = 0;
+let fruits = ["Papaya", "Grapes", "Pinapple", "Orange", "Banana"];
+
+function displayFruit() {
+  console.log(fruits[i]);
+  i++;
 }
+
+let setTimer = setInterval(displayFruit, 1000);
+
+setTimeout(() => {
+  clearTimeout(setTimer);
+}, 2000);
+
+// we are creating a delay after every interval
+
+// setTimeout=>
+// 1.runs your code only once after the timeout is completed
+
+// setInterval=>
+// run your code /function repeatedly b/w the length of each input
