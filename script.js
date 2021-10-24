@@ -1,14 +1,18 @@
-let ullielement = document.querySelectorAll("ul li");
-console.log(ullielement);
+let colors = ["red", "blue", "orange", "green", "yellow", "indigo", "violet"];
 
-let ullilistitemclass = document.querySelectorAll("ul li.list-item");
-console.log(ullilistitemclass);
+let container = document.querySelector("#container");
+let h1 = document.querySelector("h1");
+let clickedColor = document.querySelector("#clickedColor");
 
-let ullilistitemclass1 = document.querySelectorAll(".list-item");
-console.log(ullilistitemclass1);
+for (const color of colors) {
+  let box = document.createElement("div");
+  box.classList.add("box");
+  container.appendChild(box);
 
-let newselect = document.querySelectorAll("ul.normallist li");
-console.log(newselect);
-
-ullielement[ullielement.length - 1].style.background = "red";
-ullilistitemclass[ullilistitemclass.length - 1].innerHTML = "Hello";
+  box.style.backgroundColor = color;
+  box.addEventListener("click", function () {
+    h1.innerHTML = "You have selected: ";
+    clickedColor.innerHTML = color;
+    clickedColor.style.backgroundColor = color;
+  });
+}

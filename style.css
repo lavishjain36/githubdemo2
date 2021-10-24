@@ -1,16 +1,19 @@
-section {
-  background-color: aqua;
-  text-align: center;
-  padding: 15px;
-  margin: 15px;
+#container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-select {
-  font-size: 23px;
+.box {
+  width: 200px;
+  height: 200px;
 }
-
-#span-1 {
-  color: blue;
-  font-weight: bold;
-  font-size: 20px;
+h1,
+span {
+  font-size: 2em;
+  display: inline-block;
+  font-family: monospace;
+}
+#clickedColor {
+  padding: 5px;
+  color: #fff;
 }
